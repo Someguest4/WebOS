@@ -1,8 +1,31 @@
 body {
-    background-color: #f0f0f0;
     font-family: 'Google Sans', sans-serif;
     margin: 0;
-    padding: 20px;
     text-align: center;
-    
+    background-image: url(./PXL_20260102_051050025.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+.window {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 20%;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.932);
+}
+.top_bar {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.692);
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
 }

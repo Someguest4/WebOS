@@ -11,9 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght,GRAD@0,17..18,400..700,-50..200;1,17..18,400..700,-50..200&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="top_bar"> <p>WebOS</p><p id="datetime">14.3.2026 18:00</p></div>
+    <div class="window">
     <h1>Welcome to My OS</h1>
     <p>This is a simple operating system I built using HTML, CSS, and JavaScript. </br> It will demonstrate all the projects I've worked on.</p>
+    </div>
 
+
+    <script>
+    function updateDateTime() {
+        const now = new Date();
+        const datetimeElement = document.getElementById('datetime');
+        datetimeElement.textContent = now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
+    }
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // Initial update
+    updateDateTime();
+    </script>
 
 </body>
 </html>
