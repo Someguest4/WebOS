@@ -28,4 +28,22 @@ body {
     padding: 10px;
     box-sizing: border-box;
     border-radius: 0 0 10px 10px;
+    line-height: normal;
+}
+.top_bar p {
+    margin: 0;
+    font-size: 14px;
+}
+.window-header {
+    margin: -20px -20px -20px -20px;
+    background-color: rgba(0, 0, 0, 0.027);
+    border-radius: 10px 10px 0 0;
+    padding: 5px 10px 1px 10px;
+    text-align: left;
+    height: 30px;
+    
+}
+.window-header p {
+    margin: 0;
+    font-size: 16px;
 }
