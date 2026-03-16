@@ -53,3 +53,9 @@ function dragElement(element) {
         document.onmousemove = null;
     }
 }
+function closeWindow(elementid) {
+    document.getElementById(elementid).style.display = "none";
+}
+function openWindow(elementid) {
+    document.getElementById(elementid).style.display = "block";
+}
