@@ -13,6 +13,7 @@ function bringToFront(element) {
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("sylable"));
 
+
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
     // Step 2: Set up variables to keep track of the element's position.
@@ -66,4 +67,12 @@ function closeWindow(elementid) {
 function openWindow(elementid) {
     document.getElementById(elementid).style.display = "block";
     bringToFront(document.getElementById(elementid));
+}
+
+function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    const content = document.getElementById("Typearea").value;
+    doc.text(content, 10, 10);
+    doc.save("ns_syl.pdf");
 }

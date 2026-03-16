@@ -8,11 +8,10 @@
     <title>Welcome to My OS</title>
     <link rel="stylesheet" href="index-styles.css">
     <script src="https://kit.fontawesome.com/46f827a615.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght,GRAD@0,17..18,400..700,-50..200;1,17..18,400..700,-50..200&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght,GRAD@0,17..18,400..700,-50..200;1,17..18,400..700,-50..200&display=swap" rel="stylesheet">
 
 </head>
 
@@ -39,11 +38,14 @@
         </div>
         <h1>Nanosoft Sylable</h1>
         <p>This is an app built for typing and text editing.</p>
+        <button onclick="generatePDF()" id="Savebutton"><i class="fa-solid fa-save"></i>Save</button>
+        <br>
         <textarea name="Typing" id="Typearea" placeholder="Type here!"></textarea>
     </div>
     <div class="bottom-bar">
         <img src="Welcome-icon.png" alt="welcome icon" class="bottom-bar-icon"onclick="openWindow('welcome')">
-        <img src="nanosoft sylable.png" alt="nanosoft sylable icon" class="bottom-bar-icon" onclick="openWindow('sylable')">
+        <img src="nanosoft-sylable-icon.png" alt="nanosoft sylable icon" class="bottom-bar-icon" onclick="openWindow('sylable')">
+
     </div>
 
     <script src="index-script.js"></script>

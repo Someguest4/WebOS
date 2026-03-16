@@ -19,6 +19,12 @@ body {
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.932);
     display: none;
+    transition: box-shadow 0.2s ease-in-out;
+
+}
+.window:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s ease-in-out;
 }
 .top_bar {
     position: absolute;
@@ -94,3 +100,32 @@ body {
     transition: all 0.2s ease-in-out;
     
 }
+#Typearea {
+    max-width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-family: 'Google Sans', sans-serif;
+    min-width: 200px;
+    min-height: 100px;
+}
+#Savebutton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff00;
+    color: #000000;
+    cursor: url(./floppy-disk-solid.png), pointer;
+    transition: all 0.2s ease-in-out;
+    
+}
+#Savebutton:hover {
+    background-color: #8c8aff;
+    transition: all 0.2s ease-in-out;
+}
+
