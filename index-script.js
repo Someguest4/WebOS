@@ -5,7 +5,13 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
+var largestZIndex = 1;
+function bringToFront(element) {
+    largestZIndex++;
+    element.style.zIndex = largestZIndex;
+}
 dragElement(document.getElementById("welcome"));
+dragElement(document.getElementById("sylable"));
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.
 function dragElement(element) {
@@ -23,6 +29,7 @@ function dragElement(element) {
     }
 
     function startDragging(e) {
+        bringToFront(element);
         e = e || window.event;
         e.preventDefault();
         // Step 7: Get the mouse cursor position at startup.
@@ -58,4 +65,5 @@ function closeWindow(elementid) {
 }
 function openWindow(elementid) {
     document.getElementById(elementid).style.display = "block";
+    bringToFront(document.getElementById(elementid));
 }
