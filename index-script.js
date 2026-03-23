@@ -73,6 +73,30 @@ function generatePDF() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
     const content = document.getElementById("Typearea").value;
-    doc.text(content, 10, 10);
+    doc.text(content ,10 ,10, {
+        fontWeight: 'bold'
+    });
     doc.save("ns_syl.pdf");
+}
+
+function toggleBold(textarea) {
+    const selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+    if (selectedText.length > 0) {
+        const before = textarea.value.substring(0, textarea.selectionStart);
+        const after = textarea.value.substring(textarea.selectionEnd);
+        textarea.value = before + "**" + selectedText + "**" + after;
+    }
+}
+
+function updateText() {
+    const textarea = document.getElementById("Typearea");
+    const textDisplay = document.getElementById("Text");
+    onkeydown = function() {
+        this.setTimeout(function() {
+            textDisplay.textContent = textarea.value;
+        }, 0);
+        
+    }
+
+    
 }

@@ -38,9 +38,13 @@
         </div>
         <h1>Nanosoft Sylable</h1>
         <p>This is an app built for typing and text editing.</p>
-        <button onclick="generatePDF()" id="Savebutton"><i class="fa-solid fa-save"></i>Save</button>
+        <button class="sylable-button" onclick="generatePDF()" id="Savebutton"><i class="fa-solid fa-save"></i>Save</button>
+        <button class="sylable-button" id="Boldbutton" onclick="toggleBold(document.getElementById('Typearea'))"><i class="fa-solid fa-bold"></i>Bold</button>
         <br>
-        <textarea name="Typing" id="Typearea" placeholder="Type here!"></textarea>
+        <div id="actual-text">
+            <p id="Text"></p>
+            <textarea name="Typing" id="Typearea" placeholder="Type here!" onclick="updateText()"></textarea>
+        </div>
     </div>
     <div class="bottom-bar">
         <img src="Welcome-icon.png" alt="welcome icon" class="bottom-bar-icon"onclick="openWindow('welcome')">
