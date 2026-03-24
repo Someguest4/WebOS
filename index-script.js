@@ -12,6 +12,7 @@ function bringToFront(element) {
 }
 dragElement(document.getElementById("welcome"));
 dragElement(document.getElementById("sylable"));
+dragElement(document.getElementById("Tic-Tac-Toe"));
 
 
 // Step 1: Define a function called `dragElement` that makes an HTML element draggable.

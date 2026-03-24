@@ -152,5 +152,11 @@ body {
     font-family: "Google Sans", sans-serif;
     margin-top: 10px;
 }
+#ttt-iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    margin-top: 50px;
+}
 
 

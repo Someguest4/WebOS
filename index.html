@@ -46,9 +46,18 @@
             <textarea name="Typing" id="Typearea" placeholder="Type here!" onclick="updateText()"></textarea>
         </div>
     </div>
+
+    <div id="Tic-Tac-Toe" class="window">
+        <div id="Tic-Tac-Toe-header" class="window-header">
+            <p>Tic-Tac-Toe</p>
+            <i class="fa-solid fa-xmark close-btn" onclick="closeWindow('Tic-Tac-Toe')"></i>
+        </div>
+        <iframe src="https://someguest4.github.io/Tic-Tac-Toe" frameborder="0" id="ttt-iframe"></iframe>
+    </div>
     <div class="bottom-bar">
         <img src="Welcome-icon.png" alt="welcome icon" class="bottom-bar-icon"onclick="openWindow('welcome')">
         <img src="nanosoft-sylable-icon.png" alt="nanosoft sylable icon" class="bottom-bar-icon" onclick="openWindow('sylable')">
+        <img src="tic-tac-toe-icon.png" alt="tic-tac-toe icon" class="bottom-bar-icon" onclick="openWindow('Tic-Tac-Toe')">
 
     </div>
 
