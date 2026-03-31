@@ -110,6 +110,7 @@ body {
     min-height: 200px;
     border: #000000 solid 1px;
     border-radius: 10px;
+    font-weight: normal;
     
 }
 #Typearea:active, #Typearea:focus {
