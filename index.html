@@ -41,10 +41,7 @@
         <button class="sylable-button" onclick="generatePDF()" id="Savebutton"><i class="fa-solid fa-save"></i>Save</button>
         <button class="sylable-button" id="Boldbutton" onclick="toggleBold(document.getElementById('Typearea'))"><i class="fa-solid fa-bold"></i>Bold</button>
         <br>
-        <div id="actual-text">
-            <p id="Text"></p>
-            <textarea name="Typing" id="Typearea" placeholder="Type here!" onclick="updateText()"></textarea>
-        </div>
+        <div id="Typearea" contenteditable="true">Type here...</div>
     </div>
 
     <div id="Tic-Tac-Toe" class="window">
