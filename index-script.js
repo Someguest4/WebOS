@@ -80,31 +80,14 @@ function generatePDF() {
     doc.save("ns_syl.pdf");
 }
 
-var boldtoggle={
-    "normal": "bold",
-    "bold": "normal"
-}
-
-/* 
-function toggleBold(textarea) {
-    var selection = window.getSelection();
-    console.log(selection);
-    console.log(textarea.innerHTML);
-    
-    for (var char in textarea.innerHTML) {
-        console.log(char);
-        console.log(textarea.innerHTML[char]);
-        textarea.innerHTML[char].style.fontWeight = boldtoggle[getComputedStyle(textarea.innerHTML[char]).fontWeight];
-    }
-
-}
- */
-
 
 //This function is AI code that I didn't write. I just couldn't figure it out myself
 function toggleBold(textarea) {
     const selection = window.getSelection();
-    if (!selection.rangeCount || selection.isCollapsed) return;
+    if (!selection.rangeCount || selection.isCollapsed){
+        return;
+    }
+        
 
     const range = selection.getRangeAt(0);
     const fragment = range.cloneContents();
@@ -127,13 +110,7 @@ function toggleBold(textarea) {
     selection.removeAllRanges();
     selection.addRange(range);
 
-    if (allBold) {
-        // All bold - remove it
-        document.execCommand('bold');
-    } else {
-        // Not all bold - make it all bold
-        document.execCommand('bold');
-    }
+    document.execCommand('bold');
 
     textarea.focus();
 } 
