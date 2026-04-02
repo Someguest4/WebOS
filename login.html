@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - WebOS</title>
+    <link rel="stylesheet" href="login-styles.css">
+</head>
+<body>
+    <div id="filter">
+        <div id="login-container">
+            <h1>Welcome to WebOS</h1>
+            <form id="login-form" onsubmit="event.preventDefault(); login();">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" id="login-button">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
