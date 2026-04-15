@@ -111,6 +111,7 @@ body {
     border: #000000 solid 1px;
     border-radius: 10px;
     font-weight: normal;
+    cursor: text black;
     
 }
 #Typearea:active, #Typearea:focus {
@@ -127,6 +128,7 @@ body {
     color: #000000;
     cursor: url(./floppy-disk-solid.png), pointer;
     transition: all 0.2s ease;
+    margin-bottom: 10px;
     
 }
 .sylable-button:hover {

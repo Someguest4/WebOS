@@ -115,3 +115,42 @@ function toggleBold(textarea) {
     textarea.focus();
 } 
 //End of AI code
+//This is the AI code that I copied and edited to make it do Italic as well
+function toggleItalic(textarea) {
+    const selection = window.getSelection();
+    if (!selection.rangeCount || selection.isCollapsed){
+        return;
+    }
+        
+
+    const range = selection.getRangeAt(0);
+    const fragment = range.cloneContents();
+
+    // Check if all selected text is already italic
+    const walker = document.createTreeWalker(fragment, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+
+    const allItalic = textNodes.length > 0 && textNodes.every(node => {
+        let el = node.parentElement;
+        while (el && el !== fragment) {
+            if (el.tagName === 'I' || el.tagName === 'EM') return true;
+            el = el.parentElement;
+        }
+        return false;
+    });
+
+    // Restore selection and toggle italic using execCommand
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    document.execCommand('italic');
+
+    textarea.focus();
+}
+
+//This is my code now
+function saveToCloud() {
+    const content = document.getElementById("Typearea").innerHTML;
+    
+}
